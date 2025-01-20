@@ -202,65 +202,160 @@ p {
 
 /*Handy-Optimierung*/
 
-/* Allgemeine Anpassungen für alle Container */
-.standart-container {
-    max-width: 1080px; /* Maximale Breite */
-    width: 100%; /* Volle Breite auf kleinen Geräten */
-    margin: 0 auto; /* Zentrierung des Containers */
-    padding: 0 15px; /* Abstand von den Rändern */
-    box-sizing: border-box;
-}
-
-/* Kontakt Optionen Sektion */
-#contact-options {
-    display: flex;
-    flex-wrap: wrap; /* Damit die Optionen auf kleineren Bildschirmen umgebrochen werden */
-    justify-content: space-between;
-    gap: 10px; /* Abstand zwischen den Boxen */
-}
-
-#contact-options .contact-option {
-    flex: 1 1 45%;  /* Flexbox für gleichmäßige Verteilung */
-    margin: 10px 0;  /* Abstand zwischen den Boxen */
-    background-color: #1a1919;
-    min-height: 250px;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-#contact-options .contact-option h3 {
-    font-size: 25px;
-    color: rgb(236, 148, 16);
-    padding-top: 25px;
-}
-
-#contact-options .contact-option p {
-    color: white;
-    line-height: 1.7em;
-    font-size: 18px;
-    word-wrap: break-word;  /* Damit der Text umgebrochen wird, falls er zu lang ist */
-}
-
-#contact-options .material-icons {
-    font-size: 50px;
-    color: white;
-}
-
-/* Anpassungen für kleinere Bildschirme */
+/* Allgemeine Anpassungen für kleine Bildschirme */
 @media screen and (max-width: 768px) {
+
+    /* Hauptcontainer */
+    .standart-container {
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    /* Navigation */
+    #main-nav h1 {
+        font-size: 24px;
+        float: none;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    #main-nav ul {
+        float: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    #main-nav ul li {
+        display: inline-block;
+    }
+
+    #main-nav ul li a {
+        padding: 15px;
+    }
+
+    /* Willkommenssektion */
+    #welcome .welcome-content {
+        float: none;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #welcome .welcome-img {
+        float: none;
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    #welcome .welcome-img img {
+        width: 70%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #welcome .welcome-content h2 {
+        font-size: 30px;
+    }
+
+    /* About Sektion */
+    #about .about-content {
+        float: none;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #about .about-img {
+        float: none;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #about .about-img img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #about .about-content h2 {
+        font-size: 30px;
+    }
+
+    /* Skill Sektion */
+    #skills .skill {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #skills .material-icons {
+        font-size: 70px;
+    }
+
+    /* Contact-Options Sektion */
     #contact-options .contact-option {
-        flex: 1 1 100%;  /* Boxen nehmen jeweils 100% der Breite ein */
+        width: 100%;
         margin: 10px 0;
+        padding: 20px;
+        text-align: center;
     }
 
     #contact-options .contact-option h3 {
         font-size: 22px;
     }
 
+    #contact-options .material-icons {
+        font-size: 60px;
+    }
+
+    /* Footer */
+    #main-footer {
+        padding: 20px;
+    }
+
+    #main-footer p {
+        font-size: 14px;
+    }
+}
+
+/* Für sehr kleine Bildschirme (z.B. Handys im Hochformat) */
+@media screen and (max-width: 480px) {
+    /* Willkommenssektion */
+    #welcome .welcome-content h2 {
+        font-size: 24px;
+    }
+
+    /* About Sektion */
+    #about .about-content h2 {
+        font-size: 24px;
+    }
+
+    /* Contact-Options Sektion */
+    #contact-options .contact-option h3 {
+        font-size: 18px;
+    }
+
+    #contact-options .material-icons {
+        font-size: 50px;
+    }
+
+    #main-footer p {
+        font-size: 12px;
+    }
+
+    /* Anpassungen für den E-Mail-Kasten auf der Kontaktseite */
+    #contact-options .contact-option {
+        width: 100%; /* Breite auf 100% setzen */
+        padding: 20px;
+        box-sizing: border-box; /* Sicherstellen, dass Padding nicht die Gesamtbreite beeinflusst */
+        text-align: center;
+    }
+
+    /* Text innerhalb der E-Mail-Kontaktoption */
     #contact-options .contact-option p {
-        font-size: 16px;  /* Kleinere Schriftgröße für Mobilgeräte */
+        font-size: 16px;
+        word-wrap: break-word; /* Lange E-Mail-Adressen umgebrochen darstellen */
     }
 }
 
