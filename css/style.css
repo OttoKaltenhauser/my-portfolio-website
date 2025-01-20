@@ -202,11 +202,21 @@ p {
 
 /*Handy-Optimierung*/
 
+/* Allgemeine Anpassungen für alle Container */
+.standart-container {
+    max-width: 1080px; /* Maximale Breite */
+    width: 100%; /* Volle Breite auf kleinen Geräten */
+    margin: 0 auto; /* Zentrierung des Containers */
+    padding: 0 15px; /* Abstand von den Rändern */
+    box-sizing: border-box;
+}
+
 /* Kontakt Optionen Sektion */
 #contact-options {
     display: flex;
     flex-wrap: wrap; /* Damit die Optionen auf kleineren Bildschirmen umgebrochen werden */
     justify-content: space-between;
+    gap: 10px; /* Abstand zwischen den Boxen */
 }
 
 #contact-options .contact-option {
@@ -238,7 +248,7 @@ p {
     color: white;
 }
 
-/* Mobile Anpassungen für kleinere Bildschirme */
+/* Anpassungen für kleinere Bildschirme */
 @media screen and (max-width: 768px) {
     #contact-options .contact-option {
         flex: 1 1 100%;  /* Boxen nehmen jeweils 100% der Breite ein */
