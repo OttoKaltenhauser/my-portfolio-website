@@ -124,6 +124,7 @@ p {
     width: 70%;             /*Schrift neben dem ersten bild*/
     color: white;
     padding: 130px 50px;
+    font-size: 1.2em;
 }
 
 #welcome .welcome-img {
@@ -160,12 +161,13 @@ p {
     width: 70%;             /*Schrift neben dem 2 Bild*/
     color: white;
     padding: 20px;
+    font-size: 1.2em;
 }
 
 #about .about-img {
     float: left;
     width: 30%;             /*Zweites Bild*/
-    padding: 20px;
+    padding: 0;
 }
 
 #about .about-img img {
@@ -455,14 +457,6 @@ p {
     clear: both;
 }
 
-.derklärung {
-    margin: 20px;
-    font-size: 12px;
-    float: left;
-}
 
-#goog  {
-    color: blue;
-}
 
 
